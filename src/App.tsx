@@ -13,9 +13,15 @@ const App: Component = () => {
         <img src={logo} class={styles.logo} alt="logo" />
         <span>Counter</span>
       </header>
-      <div class={styles.counter}>{count()}</div>
-      <Button onClick={() => setCount((c) => c - 1)}>-</Button>
-      <Button onClick={() => setCount((c) => c + 1)}>+</Button>
+      <code class={styles.counter}>{count()}</code>
+      <div class={styles.buttons}>
+        <Button kind="minus" onClick={() => setCount((c) => c - 1)}>
+          −
+        </Button>
+        <Button kind="plus" onClick={() => setCount((c) => c + 1)}>
+          +
+        </Button>
+      </div>
     </div>
   );
 };

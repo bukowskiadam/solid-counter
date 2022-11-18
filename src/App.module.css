@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   color: white;
 }
 
@@ -25,4 +25,17 @@
 .header span {
   line-height: 32px;
   margin-left: 16px;
+}
+
+.counter {
+  margin: 16px;
+  font-size: 128px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-bottom: 30vh;
 }
