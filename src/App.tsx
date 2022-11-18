@@ -1,25 +1,21 @@
-import type { Component } from 'solid-js';
+import { Component, createSignal } from "solid-js";
 
-import logo from './logo.svg';
-import styles from './App.module.css';
+import logo from "./logo.svg";
+import styles from "./App.module.css";
+import { Button } from "./Button";
 
 const App: Component = () => {
+  const [count, setCount] = createSignal(0);
+
   return (
     <div class={styles.App}>
       <header class={styles.header}>
         <img src={logo} class={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a>
+        <span>Counter</span>
       </header>
+      <div class={styles.counter}>{count()}</div>
+      <Button onClick={() => setCount((c) => c - 1)}>-</Button>
+      <Button onClick={() => setCount((c) => c + 1)}>+</Button>
     </div>
   );
 };
