@@ -15,10 +15,10 @@ const App: Component = () => {
       </header>
       <code class={styles.counter}>{count()}</code>
       <div class={styles.buttons}>
-        <Button kind="minus" onClick={() => setCount((c) => c - 1)}>
+        <Button kind="minus" action={() => setCount((c) => c - 1)}>
           −
         </Button>
-        <Button kind="plus" onClick={() => setCount((c) => c + 1)}>
+        <Button kind="plus" action={() => setCount((c) => c + 1)}>
           +
         </Button>
       </div>

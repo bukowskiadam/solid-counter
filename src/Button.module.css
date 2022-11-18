@@ -4,6 +4,7 @@
   font-size: 64px;
   width: 40vw;
   height: 40vw;
+  user-select: none;
 }
 
 .plus {
@@ -12,4 +13,31 @@
 
 .minus {
   background-color: #f0c9c9;
+}
+
+.shake {
+  animation: shake 0.5s linear infinite;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-4px, -4px, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(4px, 4px, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 4px, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, -4px, 0);
+  }
 }
