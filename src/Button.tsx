@@ -1,4 +1,4 @@
-import type { ParentComponent } from "solid-js";
+import { onMount, ParentComponent } from "solid-js";
 import { createSignal } from "solid-js";
 
 import styles from "./Button.module.css";
@@ -9,6 +9,7 @@ export const Button: ParentComponent<{
   action: () => {};
   kind: "plus" | "minus";
 }> = ({ children, kind, action, ...props }) => {
+  let buttonRef: HTMLButtonElement | undefined;
   const [isPressed, setPressed] = createSignal(false);
 
   const startVibration = (event?: any) => {
@@ -28,8 +29,24 @@ export const Button: ParentComponent<{
     }
   };
 
+  onMount(() => {
+    if (buttonRef) {
+      buttonRef.addEventListener("touchmove", (event) => {
+        event.preventDefault();
+
+        const { clientX, clientY } = event.touches[0];
+        const element = document.elementFromPoint(clientX, clientY);
+
+        if (element !== event.target) {
+          stopVibrationAndAct();
+        }
+      });
+    }
+  });
+
   return (
     <button
+      ref={buttonRef}
       classList={{
         [button]: true,
         [plus]: kind === "plus",
