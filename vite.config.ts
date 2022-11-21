@@ -14,6 +14,13 @@ export default defineConfig({
       devOptions: {
         enabled: true,
       },
+      manifest: {
+        name: "Solid Counter",
+        short_name: "Counter",
+        description: "Simple but Solid counter!",
+        theme_color: "#282c34",
+        background_color: "#282c34",
+      },
     }),
   ],
   server: {

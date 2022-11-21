@@ -1,6 +1,6 @@
 import { Component, createSignal } from "solid-js";
 
-import logo from "./logo.svg";
+import logo from "./assets/logo.svg";
 import styles from "./App.module.css";
 import { Button } from "./Button";
 
