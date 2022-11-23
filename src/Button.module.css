@@ -2,8 +2,8 @@
   border: 8px solid white;
   border-radius: 35%;
   font-size: 64px;
-  width: 40vw;
-  height: 40vw;
+  width: 40vmin;
+  height: 40vmin;
   user-select: none;
 }
 
