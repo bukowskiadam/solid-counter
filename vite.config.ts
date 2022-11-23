@@ -24,14 +24,14 @@ export default defineConfig({
         orientation: "portrait-primary",
         icons: [
           {
-            src: "/logo.svg",
+            src: "/android-chrome-192x192.png",
             sizes: "192x192",
-            type: "image/svg+xml",
+            type: "image/png",
           },
           {
-            src: "/logo.svg",
+            src: "/android-chrome-512x512.png",
             sizes: "512x512",
-            type: "image/svg+xml",
+            type: "image/png",
           },
         ],
       },
