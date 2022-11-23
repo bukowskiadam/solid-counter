@@ -20,6 +20,20 @@ export default defineConfig({
         description: "Simple but Solid counter!",
         theme_color: "#282c34",
         background_color: "#282c34",
+        display: "fullscreen",
+        orientation: "portrait-primary",
+        icons: [
+          {
+            src: "/logo.svg",
+            sizes: "192x192",
+            type: "image/svg+xml",
+          },
+          {
+            src: "/logo.svg",
+            sizes: "512x512",
+            type: "image/svg+xml",
+          },
+        ],
       },
     }),
   ],
