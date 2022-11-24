@@ -5,6 +5,10 @@ import styles from "./Button.module.css";
 
 const { button, plus, minus, shake } = styles;
 
+const vibrate = (duration: number) => {
+  window?.navigator?.vibrate?.(duration);
+};
+
 export const Button: ParentComponent<{
   action: () => {};
   kind: "plus" | "minus";
@@ -13,12 +17,12 @@ export const Button: ParentComponent<{
   const [isPressed, setPressed] = createSignal(false);
 
   const startVibration = (event?: any) => {
-    window.navigator.vibrate(1000000);
+    vibrate(1000000);
     setPressed(true);
   };
 
   const stopVibration = (event?: any) => {
-    window.navigator.vibrate(0);
+    vibrate(0);
     setPressed(false);
   };
 
