@@ -38,5 +38,8 @@
   gap: 16px;
   width: 100%;
   justify-content: space-evenly;
-  margin-bottom: 30vh;
+}
+
+.reset {
+  margin-bottom: 16px;
 }

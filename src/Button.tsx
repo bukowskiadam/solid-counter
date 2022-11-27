@@ -62,6 +62,7 @@ export const Button: ParentComponent<{
       onPointerDown={startVibration}
       onPointerUp={stopVibrationAndAct}
       onPointerLeave={stopVibrationAndAct}
+      onPointerCancel={stopVibration}
     >
       {children}
     </button>

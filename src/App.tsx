@@ -4,6 +4,7 @@ import logo from "./assets/logo.svg";
 import styles from "./App.module.css";
 import { Button } from "./Button";
 import { restoreCount, saveCount } from "./db";
+import { ResetButton } from "./ResetButton";
 
 const App: Component = () => {
   const [count, setCount] = createSignal(restoreCount());
@@ -26,6 +27,16 @@ const App: Component = () => {
         <Button kind="plus" action={() => changeCount(1)}>
           +
         </Button>
+      </div>
+      <div></div>
+      <div class={styles.reset}>
+        <ResetButton
+          action={() => {
+            setCount(saveCount(0));
+          }}
+        >
+          Reset
+        </ResetButton>
       </div>
     </div>
   );
