@@ -10,7 +10,7 @@ const vibrate = (duration: number) => {
 };
 
 export const Button: ParentComponent<{
-  action: () => {};
+  action: () => void;
   kind: "plus" | "minus";
 }> = ({ children, kind, action, ...props }) => {
   let buttonRef: HTMLButtonElement | undefined;
