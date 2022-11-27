@@ -56,6 +56,7 @@ export const Button: ParentComponent<{
         [plus]: kind === "plus",
         [minus]: kind === "minus",
         [shake]: isPressed(),
+        "no-text-selection": true,
       }}
       {...props}
       onPointerDown={startVibration}
